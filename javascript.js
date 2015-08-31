@@ -1,5 +1,12 @@
 Javascript
 
+"Javascript Output"
+
+* Writing into an alert box, using window.alert().
+* Writing into the HTML output using document.write().
+* Writing into an HTML element, using innerHTML.
+* Writing into the browser console, using console.log().
+
 "Variable naming rules."
 
 	*      A variable may include only the letters a-z, A-Z, 0-9, the $ symbol and the underscore.

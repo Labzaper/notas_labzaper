@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#icon{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Change image</h1>
+
+	<img src="icon2.png" id="icon" onclick="changeImage()">
+
+	<script>
+		function changeImage(){
+			var image = document.getElementById('icon');
+			if(image.src.match("icon3")){
+				image.src = "icon2.png";
+			} else {
+				image.src = "icon3.png";
+			}
+		}
+	</script>
+</body>
+</html>
