@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Validate Form Input</h1>
+    
+    <p>Please input a number between 1 and 10:</p>
+
+    <input type="number" id="numb">
+    <button type="button" onclick="myFunction()">Submit</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction(){
+            var x, text;
+
+            // Get the value of the input field with id="numb"
+            x = document.getElementById("numb").value;
+            y = document.getElementById("numb");
+
+            // If x is Not a Number or less than one or greater than 10
+            if (isNaN(x) || x < 1 || x > 10){
+                text = "Input no valid";
+                y.style.color = "red";
+                y.style.fontSize = "18px";                
+            } else {
+                text = "Input OK";
+                y.style.color = "green"; 
+                y.style.fontSize = "16px";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+
+</body>
+</html>
+
+
+
