@@ -42,6 +42,21 @@ box-sizing: (content-box | border-box);
 }
 
 
+Flex -> Vendor Prefix
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin: 10px auto 20px;
+
+
 /********-----------------------------------------------------------------------------------------------------------------********\
 
 PHP
