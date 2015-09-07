@@ -14,14 +14,26 @@ Javascript
 	*      Are case-sensitive.
 	*      There is no set limit on variable name lengths.
 
-	String concatenation
-	document.write("You have " + messages + "messages.");
+"Declare many variables in one statement."
+	var person = "John Doe", carName = "Volvo", price = 200;
 
-	name= "James";
-	name += "Dean";
+"String concatenation"
+document.write("You have " + messages + "messages.");
 
-	Function Scope Defining what is accesible in code and where.
+name= "James";
+name += "Dean";
 
+"JavaScript Function Syntax"
+
+function name(parameter1, parameter2, parameter3) {
+    code to be executed
+}
+
+* Function parameters are the names listed in the function definition.
+* Function arguments are the real values received by the function when it is invoked.
+* Inside the function, the arguments are used as local variables.
+
+Function Scope Defining what is accesible in code and where.
 
 "Variable Scope"
 
@@ -89,7 +101,6 @@ Javascript
 
 
 "Functions - The arguments array" 
-
 
 	* Pass more than n items to the function:
 
