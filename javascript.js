@@ -17,14 +17,15 @@ Javascript
 "Declare many variables in one statement."
 	var person = "John Doe", carName = "Volvo", price = 200;
 
+
 "String concatenation"
 	document.write("You have " + messages + "messages.");
 
 	name= "James";
 	name += "Dean";
 
-"JavaScript Function Syntax"
 
+"JavaScript Function Syntax"
 	function name(parameter1, parameter2, parameter3) {
 	    code to be executed
 	}
@@ -35,8 +36,16 @@ Javascript
 
 	Function Scope Defining what is accesible in code and where.
 
-"Variable Scope"
 
+"JavaScript Scope"
+	* In JavaScript, objects and functions are also variables.
+	* In JavaScript, scope is the set of variables, objects, and functions you have access to.
+	* JavaScript has function scope: The scope changes inside functions.
+	* Local variables are created when a function starts, and deleted when the function is completed.
+	* If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+
+
+"Variable Scope"
 	function test()
 	{
 	     a = 123          // global scope
