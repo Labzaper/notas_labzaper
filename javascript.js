@@ -2,10 +2,10 @@ Javascript
 
 "Javascript Output"
 
-* Writing into an alert box, using window.alert().
-* Writing into the HTML output using document.write().
-* Writing into an HTML element, using innerHTML.
-* Writing into the browser console, using console.log().
+	* Writing into an alert box, using window.alert().
+	* Writing into the HTML output using document.write().
+	* Writing into an HTML element, using innerHTML.
+	* Writing into the browser console, using console.log().
 
 "Variable naming rules."
 
@@ -18,22 +18,22 @@ Javascript
 	var person = "John Doe", carName = "Volvo", price = 200;
 
 "String concatenation"
-document.write("You have " + messages + "messages.");
+	document.write("You have " + messages + "messages.");
 
-name= "James";
-name += "Dean";
+	name= "James";
+	name += "Dean";
 
 "JavaScript Function Syntax"
 
-function name(parameter1, parameter2, parameter3) {
-    code to be executed
-}
+	function name(parameter1, parameter2, parameter3) {
+	    code to be executed
+	}
 
-* Function parameters are the names listed in the function definition.
-* Function arguments are the real values received by the function when it is invoked.
-* Inside the function, the arguments are used as local variables.
+	* Function parameters are the names listed in the function definition.
+	* Function arguments are the real values received by the function when it is invoked.
+	* Inside the function, the arguments are used as local variables.
 
-Function Scope Defining what is accesible in code and where.
+	Function Scope Defining what is accesible in code and where.
 
 "Variable Scope"
 
@@ -233,12 +233,21 @@ Function Scope Defining what is accesible in code and where.
 "Objects"
 	Instantiate an object
 
-		* "Object Initializer syntax"
+		* "Object Initializer syntax | Object literal"		
+
+			var car = {type:"Fiat", model:500, color:"white"};
+
+			Accessing Object Properties:
+				car.type;
+				car[model];
+
 			var dog = {
-				breed: 	"German Shepherd"
+				breed: 	"German Shepherd",
 				bark: 	function() { console.log("woof"); }
 			};
-	                    
+
+			dog.bark();
+
 
 		* "JSON object notation"
 			var dog = {};
