@@ -138,13 +138,12 @@ Javascript
 
 
 "Arrays"
-
+	
+	// Array literal method
 	toys = ['bat', 'ball', 'puzzle']; 
-	toys = Array('bat', 'ball', 'puzzle');
 
-	arrayName = new Array();
-
-	arrayName = [];
+	var points = new Array();         // Bad
+	var points = [];                  // Good 
 
 	arrayName.push("Element 1")
 	arrayName.push("Element 2")
@@ -162,16 +161,9 @@ Javascript
 	for(j = 0; j < numbers.length; ++j) { document.write("Element " + j + " = " + numbers[j] + "<br>")}
 
 
-"Associative Arrays"
-
-	// Creating
-	balls = {"golf":"Golf balls, 6", "tennis":"Tennis balls, 3", "soccer":"Soccer ball, 1", "ping":"Ping Pong balls, 1 doz"}
-
-	// Displaying
-	for(ball in balls){document.write(ball + " = " + balls[ball] + "<br>")}
-
-
 "Array Methods"
+	
+	var x = cars.length;         // The length property returns the number of elements in cars
 
 	* concat
 		fruit = ['banana', 'apple', 'grapes']
@@ -180,6 +172,23 @@ Javascript
 		document.write(fruit.concat(veg));
 		list = fruit.concat(veg);
 
+	* delete
+		delete fruit[1];
+
+		// Using delete on array elements leaves undefined holes in the array. Use pop() or shift() instead.
+
+	* every
+		console.log(fruit.every( function (i) { return i[0] === "a"; }));     // returns False. It checks that Every element begins with a "a" letter.
+		console.log(fruit.every( function (i) { return i.length > 0; }));     // returns True. 
+
+	* filter
+		fruit = fruit.filter(function (i) {return i[0] === "a"; });     // apple
+
+	* forEach
+		fruit.forEach(function (i) {
+		     ...
+		}
+
 	* join
 		pets = ['cat', 'dog', 'rabbit', 'hamster']
 
@@ -187,12 +196,23 @@ Javascript
 		document.write(pets.join(' ') + '<br>');
 		document.write(pets.join(':') + "<br>");
 
-	* pop and push
+	* map
+		fruit = fruit.map(function (i) { return i.toUpperCase() });     // convert all letters in upercase
+
+	* pop, push, shift and unshift
 		sports = ['football', 'hockey', 'basketball']
 		sports.push('baseball')
 		sports.pop()   // Removes the last element
+		sports.shift()  // Shifting is equivalent to popping, working on the first element instead of the last.
+		sports.unshift() // It adds new elements to the beginning of an array
 
 	* reverse()
+
+	* slice
+		fruit = fruit.slice(0,2);     // ["apple", "banana"]
+
+	* some
+        console.log(fruit.every( function (i) { return i[0] === "a"; }));     // returns True. 
 
 	* sort()    // Alphabetical sort
 		console.log(fruit.sort());
@@ -203,31 +223,17 @@ Javascript
 		numbers.sort( function(a,b){return a - b} );
 		numbers.sort( function(a,b){return b - a} );      // Descending
 
-	* slice
-		fruit = fruit.slice(0,2);     // ["apple", "banana"]
-
 	* splice
        fruit = fruit.splice(1, 2, "melon","grape");
        console.log(fruit);
 
-	* map
-		fruit = fruit.map(function (i) { return i.toUpperCase() });     // convert all letters in upercase
 
-	* filter
-		fruit = fruit.filter(function (i) {return i[0] === "a"; });     // apple
-
-	* every
-		console.log(fruit.every( function (i) { return i[0] === "a"; }));     // returns False. It checks that Every element begins with a "a" letter.
-		console.log(fruit.every( function (i) { return i.length > 0; }));     // returns True. 
-
-	* some
-        console.log(fruit.every( function (i) { return i[0] === "a"; }));     // returns True. 
-
-	* forEach
-		fruit.forEach(function (i) {
-		     ...
-		}
-
+"Looping array elements"
+	var index;
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	for	(index = 0; index < fruits.length; index++) {
+	    text += fruits[index];
+	}
 
 "Methods"
      
@@ -238,6 +244,7 @@ Javascript
 	};
 
 	var x = ops.add(23,12);     // x = 35
+
 
 "Objects"
 	Instantiate an object

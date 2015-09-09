@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+	
+<p>Display the day of the weekday:</p>
+
+<span id="demo"></span>
+
+<script>
+	
+	var p = new Date();
+	var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	document.getElementById("demo").innerHTML = days[p.getDay()];
+
+</script>
+</body>
+</html>
